@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: #cce2ff;
 }
 
 //Making header color as red with light blue background
@@ -10,7 +11,6 @@ header {
 
 h1{
   color : #f50519; //Change text color
-  background-color: #cce2ff;
   font-family : helvetica; //Change font
   font-size : 32px; //Set font style
   text-transform: uppercase; //Capatilize text
