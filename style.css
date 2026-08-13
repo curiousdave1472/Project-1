@@ -3,7 +3,11 @@ body {
 }
 
 header {
-  font-family: sans-serif;
+  color : #04c91e; //Change text color
+  font-family : helvetica; //Change font
+  font-size : 32px; //Set font style
+  text-transform: uppercase; //Capatilize text
+  text-alignment: center;
 }
 
 //Making header color as green with light blue background
