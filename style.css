@@ -20,5 +20,11 @@ h1 {
 }
 
 .h4{
-  color : 
+  color : #f53505; //Change text color
+  font-family : helvetica; //Change font
+  font-size : 22px; //Set font style
+  text-transform: uppercase; //Capatilize text
+  text-alignment: center;
+}
+ 
   
