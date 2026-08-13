@@ -5,7 +5,16 @@ body {
 header {
   font-family: sans-serif;
 }
-
+//Making header color as green with light blue background
+h1 {
+  color : #04c91e; //Change text color
+  font-family : helvetica; //Change font
+  font-weight : heavy; //Set font style
+  text-transform: uppercase; //Capatilize text
+  text-alignment: center;
+}
+  
+  
 .teaser {
   margin: 50px;
   font-style: italic;
