@@ -11,7 +11,7 @@ header {
 }
 
 //Making header color as green with light blue background
-h1 {
+.h1 {
   color : #04c91e; //Change text color
   font-family : helvetica; //Change font
   font-size : 32px; //Set font style
