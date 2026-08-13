@@ -5,6 +5,10 @@ body {
 //Making header color as red with light blue background
 
 header {
+  font-family : Helvetica;
+}
+
+.h1{
   color : #f50519; //Change text color
   background-color: #cce2ff;
   font-family : helvetica; //Change font
@@ -12,8 +16,7 @@ header {
   text-transform: uppercase; //Capatilize text
   text-alignment: center;
 }
-
-.h4{
+h4{
   color : #f53505; //Change text color
   font-family : helvetica; //Change font
   font-size : 22px; //Set font style
