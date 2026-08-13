@@ -24,11 +24,17 @@ h4{
   text-alignment: center;
 }
 
-.category{
+.button {
   color : #025acc;
   font-family : helvetica;
   font-size : 16px;
   text-alignment: center;
+  background-color : #faf8b4;
+  border : dashed;
+  border-color : #fcbdf7;
+  border-radius : 8px;
+  
+}
   
  
   
