@@ -7,13 +7,14 @@ header {
 }
 
 //Making header color as green with light blue background
-.h1 {
+h1 {
   color : #04c91e; //Change text color
   font-family : helvetica; //Change font
-  font-weight : heavy; //Set font style
+  font-size : 32px; //Set font style
   text-transform: uppercase; //Capatilize text
   text-alignment: center;
 }
+
 .h4{
   color : 
   
