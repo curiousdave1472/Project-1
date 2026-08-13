@@ -2,17 +2,11 @@ body {
   text-align: center;
 }
 
-header {
-  color : #04c91e; //Change text color
-  font-family : helvetica; //Change font
-  font-size : 32px; //Set font style
-  text-transform: uppercase; //Capatilize text
-  text-alignment: center;
-}
+//Making header color as red with light blue background
 
-//Making header color as green with light blue background
-.h1 {
-  color : #04c91e; //Change text color
+header {
+  color : #f50519; //Change text color
+  background-color: #cce2ff;
   font-family : helvetica; //Change font
   font-size : 32px; //Set font style
   text-transform: uppercase; //Capatilize text
@@ -26,6 +20,7 @@ header {
   text-transform: uppercase; //Capatilize text
   text-alignment: center;
 }
+
 .category{
   color : #025acc;
   font-family : helvetica;
