@@ -25,12 +25,13 @@ h4{
 }
 
 .geography {
+  background-color: #fafab9;
   color: #300104;
   padding: 12px 24px;
   border: none;
   border-radius: 16px;
   cursor: pointer;
-  /* Crucial: Smoothly animates the background change over 0.3 seconds */
+  /* Smoothly animates the background change over 0.3 seconds */
   transition: background-color 0.3s ease;
 }
 .geography : hover {
