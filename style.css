@@ -25,10 +25,17 @@ h4{
 }
 
 .button {
-  color : #025acc;
-  font-family : helvetica;
-  font-size : 16px;
-  text-alignment: center;
+  background-color : #edfcc0;
+  color: #300104;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* Crucial: Smoothly animates the background change over 0.3 seconds */
+  transition: background-color 0.3s ease;
+}
+.button : hover {
+  background-color: #2980b9;
 }
   
  
