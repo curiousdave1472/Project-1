@@ -24,7 +24,10 @@ h4{
   text-alignment: center;
 }
 
-.geography {
+.btn : hover {
+  background-color: #bbe2fc;
+}
+.btn {
   background-color: #fafab9;
   color: #300104;
   padding: 12px 24px;
@@ -34,76 +37,5 @@ h4{
   /* Smoothly animates the background change over 0.3 seconds */
   transition: background-color 0.3s ease;
 }
-.geography : hover {
-  background-color: #bbe2fc;
-}
-.history {
-  background-color: #fafab9;
-  color: #300104;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  /* Smoothly animates the background change over 0.3 seconds */
-  transition: background-color 0.3s ease;
-}
-.history : hover {
-  background-color: #bbe2fc;
-}
-
-.technology {
-  background-color: #fafab9;
-  color: #300104;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  /* Smoothly animates the background change over 0.3 seconds */
-  transition: background-color 0.3s ease;
-}
-.technology : hover {
-  background-color: #bbe2fc;
-}
-
-.movies {
-  background-color: #fafab9;
-  color: #300104;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  /* Smoothly animates the background change over 0.3 seconds */
-  transition: background-color 0.3s ease;
-}
-.movies : hover {
-  background-color: #bbe2fc;
-}
-
-.music {
-  background-color: #fafab9;
-  color: #300104;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  /* Smoothly animates the background change over 0.3 seconds */
-  transition: background-color 0.3s ease;
-}
-.music : hover {
-  background-color: #bbe2fc;
-}
-
-.nature {
-  background-color: #fafab9;
-  color: #300104;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  /* Smoothly animates the background change over 0.3 seconds */
-  transition: background-color 0.3s ease;
-}
-.nature : hover {
-  background-color: #bbe2fc;
-}
+ 
   
