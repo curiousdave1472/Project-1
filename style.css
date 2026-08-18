@@ -24,7 +24,7 @@ h4{
   text-alignment: center;
 }
 
-.button {
+.geography {
   color: #300104;
   padding: 12px 24px;
   border: none;
@@ -33,7 +33,7 @@ h4{
   /* Crucial: Smoothly animates the background change over 0.3 seconds */
   transition: background-color 0.3s ease;
 }
-.button : hover {
+.geography : hover {
   background-color: #2980b9;
 }
   
