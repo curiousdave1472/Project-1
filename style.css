@@ -25,10 +25,6 @@ h4{
   text-alignment: center;
 }
 
-.btn:hover {
-  background-color: #FC7784;
-}
-
 .btn {
   background-color: #fafab9;
   color: #300104;
@@ -38,6 +34,10 @@ h4{
   cursor: pointer;
   /* Smoothly animates the background change over 0.3 seconds */
   transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #FC7784;
 }
 
 .answer {
