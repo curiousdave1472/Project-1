@@ -24,17 +24,7 @@ function toggleShowAnswer(e) {
   // as an onClick listener on the appropriate button.
   //
   // Write your code below
-  document.querySelector('.click').addEventListener('click', function() {
-  const answerDiv = document.querySelector('.answer-text');
-  
-  if (answerDiv.style.display === 'none') {
-    answerDiv.style.display = 'block';
-    this.textContent = 'Hide answer';
-  } else {
-    answerDiv.style.display = 'none';
-    this.textContent = 'Click here for answer';
-  }
-});
+
 }
 
 function populateQuestion() {
