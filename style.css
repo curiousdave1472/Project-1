@@ -51,7 +51,7 @@ h4{
   padding: 12px 24px;
   border: solid;
   border-weight: 1px;
-  border-color: #ff5121;
+  border-color: #ffffff;
   border-radius: 16px;
   cursor: pointer;
   /* Smoothly animates the background change over 0.3 seconds */
@@ -60,7 +60,7 @@ h4{
 
 .btn:hover {
   background-color: #FC7784;
-  border: dashed;
+  border: solid;
   border-weight: 1px;
   border-color: #beface;
   border-radius: 16px;
