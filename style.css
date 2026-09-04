@@ -29,7 +29,10 @@ h4{
   background-color: #fafab9;
   color: #300104;
   padding: 12px 24px;
-  border: none;
+  border: dotted;
+  border-weight: 1px;
+  border-color: #ff5121;
+  border-radius: 16px;
   cursor: pointer;
   /* Smoothly animates the background change over 0.3 seconds */
   transition: background-color 0.3s ease;
