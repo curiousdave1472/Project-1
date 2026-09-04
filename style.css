@@ -29,7 +29,7 @@ h4{
   background-color: #fcccfb;
   color: #300104;
   padding: 12px 24px;
-  border: dotted;
+  border: solid;
   border-weight: 1px;
   border-color: #ff5121;
   border-radius: 16px;
@@ -40,7 +40,7 @@ h4{
 
 .btn:hover {
   background-color: #FC7784;
-  border: solid;
+  border: dashed;
   border-weight: 1px;
   border-color: #beface;
   border-radius: 16px;
