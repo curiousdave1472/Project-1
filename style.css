@@ -9,6 +9,26 @@ header {
   font-family : helvetica;
 }
 
+/* The container restricts the boundary of the image */
+.img-container {
+  width: 400px;
+  height: 300px;
+  overflow: hidden; /* Prevents zoomed image from spilling out */
+  border-radius: 8px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image maintains aspect ratio */
+  transition: transform 0.4s ease; /* Controls duration and smoothness */
+}
+
+/* Triggers the zoom when hovering over the container */
+.img-container:hover img {
+  transform: scale(1.1); /* Zooms in by 10% */
+}
+
 h1{
   color : #f50519; //Change text color
   font-family : helvetica; //Change font
