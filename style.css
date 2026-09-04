@@ -16,6 +16,8 @@ header {
 }
 
 .img-container img {
+  width : 60%;
+  height : 60%;
   object-fit: cover; /*To maintains aspect ratio */
   transition: transform 0.4s ease; /* Controls duration and smoothness */
 }
