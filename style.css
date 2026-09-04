@@ -16,10 +16,8 @@ header {
 }
 
 .img-container img {
-  width: 80%;
-  height: 80%;
   object-fit: cover; /*To maintains aspect ratio */
-  transition: transform 0.6s ease; /* Controls duration and smoothness */
+  transition: transform 0.4s ease; /* Controls duration and smoothness */
 }
 
 /* Triggers the zoom by 30% when hovering over the container*/
