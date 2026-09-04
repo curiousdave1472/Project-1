@@ -9,24 +9,22 @@ header {
   font-family : helvetica;
 }
 
-/* The container restricts the boundary of the image */
+// The container restricts the boundary of the image
 .img-container {
-  width: 400px;
-  height: 300px;
-  overflow: hidden; /* Prevents zoomed image from spilling out */
+  overflow: hidden; // Prevents zoomed image spilling out
   border-radius: 8px;
 }
 
 .img-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image maintains aspect ratio */
-  transition: transform 0.4s ease; /* Controls duration and smoothness */
+  object-fit: cover; // Ensures image maintains aspect ratio
+  transition: transform 0.4s ease; // Controls duration and smoothness
 }
 
-/* Triggers the zoom when hovering over the container */
+// Triggers the zoom when hovering over the container
 .img-container:hover img {
-  transform: scale(1.1); /* Zooms in by 10% */
+  transform: scale(1.3); // Zooms in by 30%
 }
 
 h1{
