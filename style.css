@@ -9,7 +9,7 @@ header {
   font-family : helvetica;
 }
 
-/* To prevent image spilling out */
+/* To prevent image spilling out when zoom in */
 .img-container {
   overflow: hidden;
   border-radius: 8px;
@@ -22,7 +22,7 @@ header {
   transition: transform 0.4s ease; /* Controls duration and smoothness */
 }
 
-/* Triggers the zoom by 30% when hovering over the container*/
+/* Triggers the zoom by 30% when hovering over the image*/
 .img-container:hover img {
   transform: scale(1.3);
 }
@@ -30,16 +30,16 @@ header {
 h1{
   color : #f50519;  /* Change text color */
   font-family : helvetica; /* Change font */
-  font-size : 32px; /* Set font style */
-  text-transform: uppercase; /* Capatilize text */
+  font-size : 32px; /* Set font size */
+  text-transform: uppercase; /* Capitalize text */
   text-align: center;
 }
 
 h4{
   color : #f53505; /* Change text color */
   font-family : helvetica; /* Change font */
-  font-size : 22px; /* Set font style */
-  text-transform: uppercase; /* Capatilize text */
+  font-size : 22px; /* Set font size */
+  text-transform: uppercase; /* Capitalize text */
   text-align: center;
 }
 
@@ -50,13 +50,14 @@ h4{
   border: solid;
   border-weight: 1px;
   border-color: #ffffff;
-  border-radius: 16px;
-  cursor: pointer;
+  border-radius: 16px; 
+  /* change the arrow to pointer */
+  cursor: pointer; 
   /* Smoothly animates the background change over 0.3 seconds */
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover { /* effects when mouse hover over buttons */
   background-color: #FC7784;
   border: solid;
   border-weight: 1px;
@@ -64,7 +65,7 @@ h4{
   border-radius: 16px;
 }
 
-.answer {
+.answer { /* Hide the answer until show answer is clicked */
   display : none;
 }
 
