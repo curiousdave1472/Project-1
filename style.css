@@ -32,7 +32,7 @@ h1{
   font-family : helvetica; /* Change font */
   font-size : 32px; /* Set font style */
   text-transform: uppercase; /* Capatilize text */
-  text-alignment: center;
+  text-align: center;
 }
 
 h4{
@@ -40,7 +40,7 @@ h4{
   font-family : helvetica; /* Change font */
   font-size : 22px; /* Set font style */
   text-transform: uppercase; /* Capatilize text */
-  text-alignment: center;
+  text-align: center;
 }
 
 .btn {
