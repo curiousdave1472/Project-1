@@ -71,6 +71,7 @@ h4{
 
 .question {/* Hide the answer until show answer is clicked */
   display : none;
+  text-color: Red;
 }
 .about {display:none;}
 
