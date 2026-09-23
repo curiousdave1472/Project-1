@@ -67,12 +67,12 @@ h4{
 }
 
 
-*/Style sheet for books
+*/Style sheet for books*/
 
 .question {/* Hide the answer until show answer is clicked */
   display : none;
 }
-
+.about {display:none;}
 
  
   
