@@ -87,7 +87,7 @@ h4{
   transform: scale(1.3);
 }
 
-.question {/* Hide the answer until show answer is clicked */
+.book.answer {/* Hide the answer until show answer is clicked */
   display : none;
   text-color: Red;
 }
