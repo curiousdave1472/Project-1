@@ -69,7 +69,7 @@ h4{
 
 */Style sheet for books
 
-.bookanswer {/* Hide the answer until show answer is clicked */
+.question {/* Hide the answer until show answer is clicked */
   display : none;
 }
 
