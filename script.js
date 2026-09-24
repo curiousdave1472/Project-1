@@ -24,7 +24,7 @@ function toggleShowAnswer(e) {
   // as an onClick listener on the appropriate button.
   //
   // Write your code below
-
+const answerButton = document.querySelector(".btn-ans");
 }
 
 function populateQuestion() {
