@@ -48,19 +48,11 @@ function populateQuestion() {
   // use the `questionIndex` variable to represent the index.
   //
   // Write your code below
-  const questionBank = [
-  {question: "What is the capitol city of Argentina?",
-    answer: "Buenos Aires"
-  }
-  ];
-
-let questionIndex = 0;
-
   function populateQuestion() {
-  const question = questionBank[0];
+  const question = questionBank[questionIndex];
 
   document.querySelector(".questionBank").textContent = question.question;
-  document.querySelector("answer").textContent = question.answer;
+  document.querySelector(".answer").textContent = question.correct_answer;
 }
 
 // --------------- MILESTONE 4: POPULATE WITH RANDOM QUESTION ---------------------
@@ -74,11 +66,14 @@ function storeNewQuestions(data) {
   // we maintain that same data structure after implementing this function.
   //
   // Write your code below
-  function storeNewQuestions(data.results) {
+let questionBank = [];
+let questionIndex = 0;
+
+function storeNewQuestions(data) {
   questionBank = data;
 }
-
 }
+
 
 async function getQuestionRandom() {
   // TODO: This will get a new random question from the API to display on our page.
@@ -112,6 +107,12 @@ function getNextQuestion() {
   // HTML as an onClick listener on the next question button.
   //
   // Write your code below
+  function getNextQuestion() {
+  toggleShowAnswer();
+  getQuestionRandom();
+}
+
+getQuestionRandom();
 }
 
 // TODO: Once you implement the above, you can uncomment out the line below.
