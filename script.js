@@ -104,7 +104,6 @@ function getNextQuestion() {
 }
 
 getQuestionRandom();
-}
 
 // TODO: Once you implement the above, you can uncomment out the line below.
 // getQuestionRandom();
