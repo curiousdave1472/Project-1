@@ -65,8 +65,8 @@ function storeNewQuestions(data) {
   // we maintain that same data structure after implementing this function.
   //
   // Write your code below
-let questionBank = data;
-let questionIndex = 0;
+   questionBank = data;
+   questionIndex = 0;
 }
 
 
@@ -121,6 +121,12 @@ function appendCategory(categoryObject, categoriesDiv) {
   // back and add that later!
   //
   // Write your code below
+    const button = document.createElement("button");
+
+    button.textContent = categoryObject.name;
+    button.id = categoryObject.id;
+
+    categoriesDiv.appendChild(button);
 }
 
 function appendAllCategoriesToHTML(categories) {
@@ -133,7 +139,13 @@ function appendAllCategoriesToHTML(categories) {
   // to the appendCategory function.
   //
   // Write your code below
+    const categoriesDiv = document.querySelector(".categories");
+
+    categories.forEach(category => {
+        appendCategory(category, categoriesDiv);
+    });
 }
+
 
 async function getCategories() {
   // TODO: This will get a list of categories from the API to display on our page.
@@ -143,7 +155,14 @@ async function getCategories() {
   // defined above.
   //
   // Write your code below
-}
+    const response = await fetch(
+        "https://opentdb.com/api_category.php"
+    );
+
+    const data = await response.json();
+
+    appendAllCategoriesToHTML(data.trivia-categories);
+  }
 
 // TODO: Once you implement the above, you can uncomment out the line below.
 // You will also want to remove the hardcoded categories written into your HTML,
@@ -163,6 +182,15 @@ async function getQuestionsByCategory(categoryID) {
   // to give our user a question from their selected category.
   //
   // Write your code below
+  const response = await fetch(
+        `https://opentdb.com/api.php?amount=10&category=${categoryID}`
+    );
+
+    const data = await response.json();
+
+    storeNewQuestions(data.results);
+
+    populateQuestion();
 }
 
 function highlightCategoryButton(categoryID) {
@@ -177,7 +205,19 @@ function highlightCategoryButton(categoryID) {
   // back to their original styling, so it doesn't look like two are selected!
   //
   // Write your code below
+  const categoryButtons =
+        document.querySelectorAll(".categories button");
+
+    categoryButtons.forEach(button => {
+        button.classList.remove("category-selected");
+    });
+
+    const selectedButton =
+        document.getElementById(categoryID);
+
+    selectedButton.classList.add("category-selected");
 }
+    
 
 function handleCategoryClick(e) {
   // TODO: This will be the event listener for our category buttons.
@@ -193,6 +233,11 @@ function handleCategoryClick(e) {
   // highlightCategoryButton function above.
   //
   // Write your code below
+    categoryID = Number(e.target.id);
+
+    highlightCategoryButton(categoryID);
+
+    getQuestionsByCategory(categoryID);
 }
 
 // Refactored version of our getNext func to continue getting from category selected
@@ -215,4 +260,21 @@ function getNextQuestion() {
   // to handle it.
   //
   // Write your code below.
+    const answer = document.querySelector(".answer");
+    const answerButton = document.querySelector(".btn-ans");
+
+    answer.style.display = "none";
+    answerButton.innerText = "Show Answer";
+
+    if (categoryID === null) {
+        getQuestionRandom();
+    } else {
+        questionIndex++;
+
+        if (questionIndex >= questionBank.length) {
+            questionIndex = 0;
+        }
+
+        populateQuestion();
+    }
 }
