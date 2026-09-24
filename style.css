@@ -74,8 +74,8 @@ h4{
 }
 
 .img-container.books img {
-  width : 60%;
-  height : 40%;
+  width : 50%;
+  height : 30%;
   object-fit: cover; /*To maintains aspect ratio */
   transition: transform 0.4s ease; /* Controls duration and smoothness */
 }
