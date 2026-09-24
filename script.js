@@ -25,13 +25,13 @@ function toggleShowAnswer(e) {
   //
   // Write your code below
 const answerButton = document.querySelector(".btn-ans");
-const answer = document.querySelector("answer");
+const answer = document.querySelector(".answer");
   if (answer.style.display === 'none') {
     answer.style.display = 'block'; 
-    btn-ans.innerText = "Hide Answer";
+    answerButton.innerText = "Hide Answer";
   } else {
     answer.style.display = 'none';
-    btn-ans.innerText = "Show Answer";
+    answerButton.innerText = "Show Answer";
   }};
 
 
