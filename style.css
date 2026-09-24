@@ -65,7 +65,7 @@ h4{
 .btn:hover {/* effects when mouse hover over buttons */
   background-color: #FC7784;
   border: solid;
-  border-weight: 1px;
+  border-width: 1px;
   border-color: #beface;
   border-radius: 16px;
 }
@@ -94,6 +94,33 @@ h4{
   border-weight: 1px;
   border-color: #beface;
   border-radius: 16px;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.categories button {
+  background-color: #fcccfb;
+  color: #300104;
+  padding: 10px 16px;
+  border: 1px solid white;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categories button:hover {
+  background-color: #FC7784;
+}
+
+.category-selected {
+  background-color: #f50519 !important;
+  color: white !important;
 }
 
 
