@@ -48,11 +48,19 @@ function populateQuestion() {
   // use the `questionIndex` variable to represent the index.
   //
   // Write your code below
+  const questionBank = [
+  {question: "What is the capitol city of Argentina?",
+    answer: "Buenos Aires"
+  }
+  ];
+
+let questionIndex = 0;
+
   function populateQuestion() {
   const question = questionBank[0];
 
-  document.getElementClass("question").textContent = question.question;
-  document.getElementByClass("answer").textContent = question.answer;
+  document.querySelector(".questionBank").textContent = question.question;
+  document.querySelector("answer").textContent = question.answer;
 }
 
 }
