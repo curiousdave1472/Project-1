@@ -51,7 +51,7 @@ function populateQuestion() {
   const question = questionBank[questionIndex];
 
   document.querySelector(".questionBank").textContent = question.question;
-  document.querySelector(".answer").textContent = question.correct_answer;
+  document.querySelector(".answer").textContent = question.answer;
 }
 
 // --------------- MILESTONE 4: POPULATE WITH RANDOM QUESTION ---------------------
@@ -65,7 +65,7 @@ function storeNewQuestions(data) {
   // we maintain that same data structure after implementing this function.
   //
   // Write your code below
-let questionBank = [];
+let questionBank = data;
 let questionIndex = 0;
 }
 
@@ -86,8 +86,6 @@ async function getQuestionRandom() {
   populateQuestion();
 }
 
-}
-
 function getNextQuestion() {
   // TODO: This will be the event listener for our Next Question button.
   //
@@ -101,7 +99,6 @@ function getNextQuestion() {
   // HTML as an onClick listener on the next question button.
   //
   // Write your code below
-  function getNextQuestion() {
   toggleShowAnswer();
   getQuestionRandom();
 }
