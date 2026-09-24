@@ -48,6 +48,13 @@ function populateQuestion() {
   // use the `questionIndex` variable to represent the index.
   //
   // Write your code below
+  function populateQuestion() {
+  const question = questionBank[0];
+
+  document.getElementClass("question").textContent = question.question;
+  document.getElementByClass("answer").textContent = question.answer;
+}
+
 }
 
 // --------------- MILESTONE 4: POPULATE WITH RANDOM QUESTION ---------------------
