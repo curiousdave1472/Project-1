@@ -48,7 +48,6 @@ function populateQuestion() {
   // use the `questionIndex` variable to represent the index.
   //
   // Write your code below
-  function populateQuestion() {
   const question = questionBank[questionIndex];
 
   document.querySelector(".questionBank").textContent = question.question;
@@ -68,10 +67,6 @@ function storeNewQuestions(data) {
   // Write your code below
 let questionBank = [];
 let questionIndex = 0;
-
-function storeNewQuestions(data) {
-  questionBank = data;
-}
 }
 
 
@@ -84,11 +79,10 @@ async function getQuestionRandom() {
   // question using the populateQuestion function above.
   //
   // Write your code below
-  async function getQuestionRandom() {
   const response = await fetch("https://opentdb.com/api.php?amount=1");
   const data = await response.json();
 
-  storeNewQuestions(data);
+  storeNewQuestions(data.results);
   populateQuestion();
 }
 
