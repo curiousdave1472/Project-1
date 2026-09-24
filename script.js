@@ -86,7 +86,7 @@ async function getQuestionRandom() {
   populateQuestion();
 }
 
-function getNextQuestion() {
+ 
   // TODO: This will be the event listener for our Next Question button.
   //
   // Complete this function so that it calls getQuestionRandom (defined above).
@@ -99,11 +99,7 @@ function getNextQuestion() {
   // HTML as an onClick listener on the next question button.
   //
   // Write your code below
-  toggleShowAnswer();
-  getQuestionRandom();
-}
-
-getQuestionRandom();
+  
 
 // TODO: Once you implement the above, you can uncomment out the line below.
 // getQuestionRandom();
@@ -127,6 +123,8 @@ function appendCategory(categoryObject, categoriesDiv) {
     button.id = categoryObject.id;
 
     categoriesDiv.appendChild(button);
+     button.addEventListener("click", handleCategoryClick);
+
 }
 
 function appendAllCategoriesToHTML(categories) {
@@ -161,7 +159,7 @@ async function getCategories() {
 
     const data = await response.json();
 
-    appendAllCategoriesToHTML(data.trivia-categories);
+    appendAllCategoriesToHTML(data.trivia_categories);
   }
 
 // TODO: Once you implement the above, you can uncomment out the line below.
