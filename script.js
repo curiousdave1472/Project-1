@@ -24,15 +24,18 @@ function toggleShowAnswer(e) {
   // as an onClick listener on the appropriate button.
   //
   // Write your code below
-const answerButton = document.querySelector(".btn-ans");
-const answer = document.querySelector(".answer");
-  if (answer.style.display === 'none') {
-    answer.style.display = 'block'; 
-    answerButton.innerText = "Hide Answer";
-  } else {
-    answer.style.display = 'none';
+  const answerButton = document.querySelector(".btn-ans");
+  const answer = document.querySelector(".answer");
+
+  if (answer.style.display === "block") {
+    answer.style.display = "none";
     answerButton.innerText = "Show Answer";
-  }};
+  } else {
+    answer.style.display = "block";
+    answerButton.innerText = "Hide Answer";
+  }
+}
+
 
 
 function populateQuestion() {
