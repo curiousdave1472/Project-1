@@ -66,38 +66,14 @@ h4{
   border-radius: 16px;
 }
 
-*/Style sheet for books*/
-/* To prevent image spilling out when zoom in */
-.img-container.general {
+*/Style sheet for Books*/
+
+.img-container.books { /* To prevent image spilling out when zoom in */
   overflow: hidden;
   border-radius: 8px;
 }
 
-.img-container.book img {
-  width : 40%;
-  height : 40%;
-  object-fit: cover; /*To maintains aspect ratio */
-  transition: transform 0.4s ease; /* Controls duration and smoothness */
-}
-
-/* Triggers the zoom by 30% when hovering over the image */
-.img-container.book:hover img {
-  transform: scale(1.3);
-}
-
-.general.answer {/* Hide the answer until show answer is clicked */
-  display : none;
-}
-
-*/Style sheet for books*/
-
-/* To prevent image spilling out when zoom in */
-.img-container.book {
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.img-container.book img {
+.img-container.books img {
   width : 60%;
   height : 40%;
   object-fit: cover; /*To maintains aspect ratio */
@@ -105,13 +81,36 @@ h4{
 }
 
 /* Triggers the zoom by 30% when hovering over the image */
-.img-container.book:hover img {
+.img-container.books:hover img {
   transform: scale(1.3);
 }
 
-.book.answer {/* Hide the answer until show answer is clicked */
+.books.answer {/* Hide the answer until show answer is clicked */
   display : none;
-  text-color: Red;
+}
+
+*/Style sheet for general*/
+
+/* To prevent image spilling out when zoom in */
+.img-container.general {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.img-container.general img {
+  width : 40%;
+  height : 40%;
+  object-fit: cover; /*To maintains aspect ratio */
+  transition: transform 0.4s ease; /* Controls duration and smoothness */
+}
+
+/* Triggers the zoom by 30% when hovering over the image */
+.img-container.general:hover img {
+  transform: scale(1.3);
+}
+
+.general.answer {/* Hide the answer until show answer is clicked */
+  display : none;
 }
 
 
