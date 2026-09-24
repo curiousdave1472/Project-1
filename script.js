@@ -63,8 +63,6 @@ let questionIndex = 0;
   document.querySelector("answer").textContent = question.answer;
 }
 
-}
-
 // --------------- MILESTONE 4: POPULATE WITH RANDOM QUESTION ---------------------
 
 function storeNewQuestions(data) {
@@ -76,6 +74,10 @@ function storeNewQuestions(data) {
   // we maintain that same data structure after implementing this function.
   //
   // Write your code below
+  function storeNewQuestions(data.results) {
+  questionBank = data;
+}
+
 }
 
 async function getQuestionRandom() {
@@ -87,6 +89,14 @@ async function getQuestionRandom() {
   // question using the populateQuestion function above.
   //
   // Write your code below
+  async function getQuestionRandom() {
+  const response = await fetch("https://opentdb.com/api.php?amount=1");
+  const data = await response.json();
+
+  storeNewQuestions(data);
+  populateQuestion();
+}
+
 }
 
 function getNextQuestion() {
