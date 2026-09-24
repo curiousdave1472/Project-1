@@ -28,10 +28,10 @@ const answerButton = document.querySelector(".btn-ans");
 const answer = document.querySelector("answer");
   if (answer.style.display === 'none') {
     answer.style.display = 'block'; 
-    answerButton.innerText = "Hide Answer";
+    btn-ans.innerText = "Hide Answer";
   } else {
     answer.style.display = 'none';
-    answerButton.innerText = "Show Answer";
+    btn-ans.innerText = "Show Answer";
   }};
 
 
