@@ -122,8 +122,8 @@ h4{
 }
 
 .img-container.movies img {
-  width : 60%;
-  height : 60%;
+  width : 40%;
+  height : 40%;
   object-fit: cover; /*To maintains aspect ratio */
   transition: transform 0.4s ease; /* Controls duration and smoothness */
 }
