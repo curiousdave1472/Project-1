@@ -27,8 +27,8 @@ function toggleShowAnswer(e) {
   const answerButton = document.querySelector(".btn-ans");
   const answer = document.querySelector(".answer");
 
-  if (answer.style.display === "block") {
-    answer.style.display = "none";
+  if (answer.style.display === "none") {
+    answer.style.display = "block";
     answerButton.innerText = "Show Answer";
   } else {
     answer.style.display = "block";
