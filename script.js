@@ -27,10 +27,11 @@ function toggleShowAnswer(e) {
   const answerButton = document.querySelector(".btn-ans");
   const answer = document.querySelector(".answer");
 
+  //If the answer is hidden, make the button as "Show Answer"
   if (answer.style.display === "none") {
     answer.style.display = "block";
     answerButton.innerText = "Show Answer";
-  } else {
+  } else {//If the answer is visible, make the button "Hide Answer"
     answer.style.display = "block";
     answerButton.innerText = "Hide Answer";
   }
@@ -53,7 +54,10 @@ function populateQuestion() {
   // Write your code below
   const question = questionBank[questionIndex];
 
+  //This will pull the question from the question bank
   document.querySelector(".questionBank").textContent = question.question;
+  
+  //This will pull the answer text from the answer index
   document.querySelector(".answer").textContent = question.answer;
 }
 
@@ -68,7 +72,10 @@ function storeNewQuestions(data) {
   // we maintain that same data structure after implementing this function.
   //
   // Write your code below
+
+  //This will store the data in the questionBank
    questionBank = data;
+  //This will start from index 0
    questionIndex = 0;
 }
 
@@ -82,10 +89,14 @@ async function getQuestionRandom() {
   // question using the populateQuestion function above.
   //
   // Write your code below
+
+  //This will fetch the questions from the API database
   const response = await fetch("https://opentdb.com/api.php?amount=1");
   const data = await response.json();
 
+  //This will store the questions in the data as result when fetched from API
   storeNewQuestions(data.results);
+  //Pass the argument in the function
   populateQuestion();
 }
 
@@ -107,6 +118,8 @@ async function getQuestionRandom() {
 // TODO: Once you implement the above, you can uncomment out the line below.
 // getQuestionRandom();
 
+//I deleted the milestone 4  getQuestionRandom() instead of commenting out.
+
 // --------------------- MILESTONE 5: POPULATE CATEGORIES FROM API ---------------------
 
 function appendCategory(categoryObject, categoriesDiv) {
@@ -120,12 +133,14 @@ function appendCategory(categoryObject, categoriesDiv) {
   // back and add that later!
   //
   // Write your code below
+  //Create buttons for the elements from categories from the API
     const button = document.createElement("button");
 
     button.textContent = categoryObject.name;
     button.id = categoryObject.id;
 
     categoriesDiv.appendChild(button);
+  //Create event listener to pull the categories
      button.addEventListener("click", handleCategoryClick);
 
 }
