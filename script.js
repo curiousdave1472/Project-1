@@ -33,7 +33,7 @@ function toggleShowAnswer(e) {
     answerButton.innerText = "Hide Answer";
   } else {//If the answer is visible, make the button "Hide Answer"
     answer.style.display = "none";
-    answerButton.innerText = "SHow Answer";
+    answerButton.innerText = "Show Answer";
   }
 }
 
@@ -52,13 +52,14 @@ function populateQuestion() {
   // use the `questionIndex` variable to represent the index.
   //
   // Write your code below
+
   const question = questionBank[questionIndex];
 
   //This will pull the question from the question bank
   document.querySelector(".questionBank").textContent = question.question;
   
   //This will pull the answer text from the answer index
-  document.querySelector(".answer").textContent = question.answer;
+  document.querySelector(".answer").textContent = question.correct_answer;
 }
 
 // --------------- MILESTONE 4: POPULATE WITH RANDOM QUESTION ---------------------
