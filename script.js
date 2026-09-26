@@ -30,10 +30,10 @@ function toggleShowAnswer(e) {
   //If the answer is hidden, make the button as "Show Answer"
   if (answer.style.display === "none") {
     answer.style.display = "block";
-    answerButton.innerText = "Show Answer";
-  } else {//If the answer is visible, make the button "Hide Answer"
-    answer.style.display = "block";
     answerButton.innerText = "Hide Answer";
+  } else {//If the answer is visible, make the button "Hide Answer"
+    answer.style.display = "none";
+    answerButton.innerText = "SHow Answer";
   }
 }
 
