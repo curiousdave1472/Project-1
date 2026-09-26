@@ -177,7 +177,7 @@ async function getCategories() {
 
     const data = await response.json();
 
-    appendAllCategoriesToHTML(data.trivia_categories);
+    appendAllCategoriesToHTML(data.trivia_categories.slice(0,5));
   }
 
 // TODO: Once you implement the above, you can uncomment out the line below.
