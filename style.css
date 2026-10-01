@@ -83,11 +83,13 @@ h4{
 }
 
 .userAnswer {
+  background-color: #ffffff;
   width: 80%;
   max-width: 500px;
   padding: 12px;
   font-size: 16px;
-  border: 2px solid #ffffff;
+  border: 2px;
+  border-style: solid;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -108,6 +110,10 @@ h4{
 
 .submitAnswer:hover {
   background-color: #FC7784;
+  border: solid;
+  border-width: 1px;
+  border-color: #beface;
+  border-radius: 16px;
 }
 
 
@@ -115,6 +121,7 @@ h4{
   font-size : 16px;
   display : none;
 }
+
 .btn-ans {
   display: inline-block;
   background-color: #fcccfb;
@@ -129,6 +136,7 @@ h4{
   /* Smoothly animates the background change over 0.3 seconds */
   transition: background-color 0.3s ease;
 }
+
 .btn-ans:hover {/* effects when mouse hover over buttons */
   background-color: #FC7784;
   border: solid;
@@ -136,6 +144,7 @@ h4{
   border-color: #beface;
   border-radius: 16px;
 }
+
 .categories {
   display: flex;
   flex-wrap: wrap;
