@@ -27,14 +27,31 @@
   <br> P.S. We continue to add and change the Trivia weekly so please subscribe for updates.
   </div>
   
-  <section class="categories-section">
+<section class="categories-section">
   <h2>Please choose a category</h2>
-  <div class="categories"></div>
+    
+<div class="categories"></div>
   </section>
   
-  <p class= "questionBank">
+  <p class= "questionBank"></p>
 
-  </p>
+<div class="answer-section">
+
+  <label for="userAnswer"> Your Answer:</label>
+
+  <input type="text"
+    id="userAnswer"
+    placeholder="Type your answer here"
+    autocomplete="off">
+
+  <button type="button" id="submitAnswer">Submit Answer</button>
+
+  </div>
+
+  <p class="feedback"></p>
+
+<button class="btn btn-next" type="button"> Next Question</button>
+
 
 <div> 
 <button class="btn-ans" onclick= "toggleShowAnswer()">Show Answer</button>
