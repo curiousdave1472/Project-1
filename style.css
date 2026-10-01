@@ -70,6 +70,47 @@ h4{
   border-radius: 16px;
 }
 
+.answer-section {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.answer-section label {
+  font-weight: bold;
+}
+
+.userAnswer {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.userAnswer:focus {
+  outline: 2px solid #f50519;
+}
+
+.submitAnswer {
+  padding: 12px 24px;
+  background-color: #fcccfb;
+  color: #300104;
+  border: 1px solid white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.submitAnswer:hover {
+  background-color: #FC7784;
+}
+
+
 .answer {/* Hide the answer until show answer is clicked */
   font-size : 16px;
   display : none;
