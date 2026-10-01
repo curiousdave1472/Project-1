@@ -95,7 +95,9 @@ h4{
 }
 
 .userAnswer:focus {
-  outline: 2px solid #f50519;
+  outline: 2px 
+  border-style:solid; 
+  border-color: #f50519;
 }
 
 .submitAnswer {
