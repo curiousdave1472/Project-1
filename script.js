@@ -28,10 +28,11 @@ function toggleShowAnswer(e) {
   const answer = document.querySelector(".answer");
 
   //If the answer is hidden, make the button as "Show Answer"
-  if (answer.style.display === "none") {
+  if (answer.style.display === "none") {//This will display the answer when clicked
     answer.style.display = "block";
+    //ANswer button text will be changed to hide answer when it "Hide answer"
     answerButton.innerText = "Hide Answer";
-  } else {//If the answer is visible, make the button "Hide Answer"
+  } else {//If the answer is hidden, make the button "Show Answer"
     answer.style.display = "none";
     answerButton.innerText = "Show Answer";
   }
@@ -93,6 +94,7 @@ async function getQuestionRandom() {
 
   //This will fetch the questions from the API database
   const response = await fetch("https://opentdb.com/api.php?amount=1");
+  //The data fetch amy slow and told to wait for respond
   const data = await response.json();
 
   //This will store the questions in the data as result when fetched from API
@@ -134,13 +136,17 @@ function appendCategory(categoryObject, categoriesDiv) {
   // back and add that later!
   //
   // Write your code below
+  
   //Create buttons for the elements from categories from the API
     const button = document.createElement("button");
-
+  
+  //This will make the button by category
     button.textContent = categoryObject.name;
+  
     button.id = categoryObject.id;
-
+  //This will place the button inside the categories
     categoriesDiv.appendChild(button);
+  
   //Create event listener to pull the categories
      button.addEventListener("click", handleCategoryClick);
 
@@ -157,9 +163,10 @@ function appendAllCategoriesToHTML(categories) {
   //
   // Write your code below
     const categoriesDiv = document.querySelector(".categories");
-
-    categories.forEach(category => {
-        appendCategory(category, categoriesDiv);
+  
+// Loop through each category and add it to the categories div and do once for each catogery
+  categories.forEach(category => {
+      appendCategory(category, categoriesDiv);
     });
 }
 
@@ -172,12 +179,14 @@ async function getCategories() {
   // defined above.
   //
   // Write your code below
+  
+  //This will grab all catogeries from the database
     const response = await fetch(
         "https://opentdb.com/api_category.php"
     );
 
     const data = await response.json();
-
+  //Grab only 4 catogeries from the database by adding slice
     appendAllCategoriesToHTML(data.trivia_categories.slice(0,4));
   }
 
@@ -199,17 +208,19 @@ async function getQuestionsByCategory(categoryID) {
   // to give our user a question from their selected category.
   //
   // Write your code below
+  //This will fetch 10 questions from the catogery ID to the result
   const response = await fetch(
         `https://opentdb.com/api.php?amount=10&category=${categoryID}`
     );
 
     const data = await response.json();
-
+  //This will store the questions in the result
     storeNewQuestions(data.results);
 
     populateQuestion();
 }
 
+// Create a function that highlights the category button that was selected
 function highlightCategoryButton(categoryID) {
   // TODO: Change the color of a category button when it's selected.
   //
@@ -222,20 +233,22 @@ function highlightCategoryButton(categoryID) {
   // back to their original styling, so it doesn't look like two are selected!
   //
   // Write your code below
-  const categoryButtons =
-        document.querySelectorAll(".categories button");
-
-    categoryButtons.forEach(button => {
+  
+  // Find all <button> elements inside the element with the class "categories"
+  const categoryButtons = document.querySelectorAll(".categories button");
+  
+  // Go through each category button one at a time
+    categoryButtons.forEach(button => {// Remove the "category-selected" class from the button
         button.classList.remove("category-selected");
     });
-
-    const selectedButton =
-        document.getElementById(categoryID);
-
+    // Find the specific button whose id matches the categoryID
+    const selectedButton = document.getElementById(categoryID);
+    
+  // Add the "category-selected" class to the selected button
     selectedButton.classList.add("category-selected");
 }
     
-
+//// Create a function that runs when a category button is clicked
 function handleCategoryClick(e) {
   // TODO: This will be the event listener for our category buttons.
   //
@@ -250,10 +263,11 @@ function handleCategoryClick(e) {
   // highlightCategoryButton function above.
   //
   // Write your code below
+    // Get the ID of the element that was clicked and convert it from a string to a number
     categoryID = Number(e.target.id);
-
+    // Highlight the category button that was clicked
     highlightCategoryButton(categoryID);
-
+    //Get the question belongs to the catogery
     getQuestionsByCategory(categoryID);
 }
 
@@ -277,21 +291,28 @@ function getNextQuestion() {
   // to handle it.
   //
   // Write your code below.
+
+  // Create a variable called "answer" that finds the HTML element with the class name "answer".
     const answer = document.querySelector(".answer");
+  
+  // Create a variable called "answerButton" that finds the HTML element with the class name "btn-ans".
     const answerButton = document.querySelector(".btn-ans");
 
+  // Hide the answer element by changing its CSS display property to "none".
     answer.style.display = "none";
+  
+  // Change the text on the answer button back to "Show Answer".
     answerButton.innerText = "Show Answer";
-
-    if (categoryID === null) {
+  // Check if categoryID is null, meaning no specific category was selected.
+    if (categoryID === null) {// If no category is selected, get a random question.
         getQuestionRandom();
-    } else {
+    } else { // If a category is selected, increase questionIndex so we move to the next question.
         questionIndex++;
-
-        if (questionIndex >= questionBank.length) {
+        // Check if questionIndex has reached the end of questionBank.
+        if (questionIndex >= questionBank.length) {// so we start again from the first question.
             questionIndex = 0;
         }
-
+    // Display the question at the current questionIndex.
         populateQuestion();
     }
 }
