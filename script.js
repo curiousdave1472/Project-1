@@ -316,3 +316,23 @@ function getNextQuestion() {
         populateQuestion();
     }
 }
+//Score starts at 0 and create the variable score
+let score = 0;
+//Create the function for score as updateScore
+function updateScore() {
+    document.getElementById("score").innerText = score;
+}
+//Now check the answer and add one point for each correct answer
+function checkAnswer(userAnswer, correctAnswer) {
+
+    if (userAnswer === correctAnswer) {
+        score++; updateScore(); alert("Correct!");
+    } else {
+        alert("Wrong answer!");
+    }
+}
+//To reset the score when done
+function resetScore() {
+    score = 0; updateScore();
+}
+resetScore();
