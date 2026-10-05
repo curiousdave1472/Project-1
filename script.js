@@ -318,6 +318,13 @@ function getNextQuestion() {
 }
 //Score starts at 0 and create the variable score
 let score = 0;
+
+//This function is to make submit answer to work with the score
+var submitAnswerbtn = document.quereySelector(".submitAnswer");
+submitAnswerbtn.addEventListener("click",()=> {
+alert("submitAnswer")
+}
+
 //Create the function for score as updateScore
 function updateScore() {
     score = document.getElementById("score").innerText;
