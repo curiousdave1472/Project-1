@@ -322,7 +322,7 @@ let score = 0;
 //This function is to make submit answer to work with the score
 var submitAnswerbtn = document.querySelector(".submitAnswer");
 submitAnswerbtn.addEventListener("click",()=> {
-  let userAnswer = documentelementById("userAnswer").value;
+  let userAnswer = document.getElementById("userAnswer").value;
   console.log("question=> ", question)
 });
 
