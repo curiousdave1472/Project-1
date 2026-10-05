@@ -320,8 +320,10 @@ function getNextQuestion() {
 let score = 0;
 //Create the function for score as updateScore
 function updateScore() {
-    document.getElementById("score").innerText = score;
+    score = document.getElementById("score").innerText;
+  console.log("score= ",score)
 }
+
 //Now check the answer and add one point for each correct answer
 function checkAnswer(userAnswer, correctAnswer) {
 
