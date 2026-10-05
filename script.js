@@ -323,11 +323,11 @@ let score = 0;
 let submitAnswerbtn = document.querySelector(".submitAnswer");
 
 submitAnswerbtn.addEventListener("click",()=> {
-  let userAnswer = document.getElementById("userAnswer").value;
-  let correctAnswer = questionBank[questionIndex].correct_answer;
+    let userAnswer = document.getElementById("userAnswer").value;
+    let correctAnswer = questionBank[questionIndex].correct_answer;
 
   checkAnswer(userAnswer,correctAnswer)
-});
+  });
 
 //Create the function for score as updateScore
 function updateScore() {
