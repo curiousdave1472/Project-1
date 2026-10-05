@@ -321,15 +321,17 @@ let score = 0;
 
 //This function is to make submit answer to work with the score
 let submitAnswerbtn = document.querySelector(".submitAnswer");
+
 submitAnswerbtn.addEventListener("click",()=> {
   let userAnswer = document.getElementById("userAnswer").value;
-  let correctAnswer = questionBank[0].correct_answer;
-  console.log("userAnswer CorrectAnswer", userAnswer, correctAnswer)
+  let correctAnswer = questionBank[questionIndex].correct_answer;
+
+  checkAnswer(userAnswer,correctAnswer)
 });
 
 //Create the function for score as updateScore
 function updateScore() {
-    score = document.getElementById("score").innerText;
+  document.getElementById("score").innerText = score;
   console.log("score= ",score)
 }
 
@@ -337,7 +339,9 @@ function updateScore() {
 function checkAnswer(userAnswer, correctAnswer) {
 
     if (userAnswer === correctAnswer) {
-        score++; updateScore(); alert("Correct!");
+        score++;   
+        updateScore(); 
+        alert("Correct!");
     } else {
         alert("Wrong answer!");
     }
@@ -346,4 +350,4 @@ function checkAnswer(userAnswer, correctAnswer) {
 function resetScore() {
     score = 0; updateScore();
 }
-resetScore();
+//resetScore();
