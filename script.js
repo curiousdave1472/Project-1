@@ -323,7 +323,8 @@ let score = 0;
 let submitAnswerbtn = document.querySelector(".submitAnswer");
 submitAnswerbtn.addEventListener("click",()=> {
   let userAnswer = document.getElementById("userAnswer").value;
-  console.log("question=> ", question)
+  let correctAnswer = questionBank[0].correct_answer;
+  console.log("userAnswer CorrectAnswer", userAnswer, correctAnswer)
 });
 
 //Create the function for score as updateScore
