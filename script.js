@@ -320,10 +320,10 @@ function getNextQuestion() {
 let score = 0;
 
 //This function is to make submit answer to work with the score
-var submitAnswerbtn = document.quereySelector(".submitAnswer");
+var submitAnswerbtn = document.querySelector(".submitAnswer");
 submitAnswerbtn.addEventListener("click",()=> {
 alert("submitAnswer")
-}
+});
 
 //Create the function for score as updateScore
 function updateScore() {
