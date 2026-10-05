@@ -119,7 +119,7 @@ async function getQuestionRandom() {
   
 
 // TODO: Once you implement the above, you can uncomment out the line below.
-// getQuestionRandom();
+   getQuestionRandom();
 
 //I deleted the milestone 4  getQuestionRandom() instead of commenting out.
 
