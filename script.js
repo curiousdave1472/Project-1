@@ -351,13 +351,16 @@ let questionAnswered = 0;
 // Update the number of questions answered on the page
 function updateQuestionsAnswered() {
     document.getElementById("questionsAnswered").innerText = questionsAnswered;
+ //Update the question answered
+  questionsAnswered++;
+//Call the function after updating
+  updateQuestionsAnswered();
 }
 //Call the function after updating the number
-questionsAnswered++;
-updateQuestionsAnswered();
+
 
 //To reset the score when done
 function resetScore() {
     score = 0; updateScore();
 }
-//resetScore();
+resetScore(10);
