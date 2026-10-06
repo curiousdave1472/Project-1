@@ -319,6 +319,17 @@ function getNextQuestion() {
 //Score starts at 0 and create the variable score
 let score = 0;
 
+// To track how many questions answered, assign the variable start from 0
+let questionAnswered = 0;
+
+// Update the number of questions answered on the page
+function updateQuestionsAnswered() {
+    document.getElementById("questionsAnswered").innerText = questionsAnswered;
+ 
+}
+//Call the function after updating the number
+updateQuestionAnswered()
+
 //This function is to make submit answer to work with the score
 let submitAnswerbtn = document.querySelector(".submitAnswer");
 
@@ -327,6 +338,11 @@ submitAnswerbtn.addEventListener("click",()=> {
     let correctAnswer = questionBank[questionIndex].correct_answer;
 
   checkAnswer(userAnswer,correctAnswer)
+
+  //Update the question answered
+  questionsAnswered++;
+  //Call the function after updating
+  updateQuestionsAnswered();
   });
 
 //Create the function for score as updateScore
@@ -346,17 +362,7 @@ function checkAnswer(userAnswer, correctAnswer) {
         alert("Wrong answer!");
     }
 }
-// To track how many questions answered, assign the variable start from 0
-let questionAnswered = 0;
-// Update the number of questions answered on the page
-function updateQuestionsAnswered() {
-    document.getElementById("questionsAnswered").innerText = questionsAnswered;
- //Update the question answered
-  questionsAnswered++;
-//Call the function after updating
-  updateQuestionsAnswered();
-}
-//Call the function after updating the number
+
 
 
 //To reset the score when done
