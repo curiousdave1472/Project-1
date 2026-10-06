@@ -346,6 +346,16 @@ function checkAnswer(userAnswer, correctAnswer) {
         alert("Wrong answer!");
     }
 }
+// To track how many questions answered, assign the variable start from 0
+let questionAnswered = 0;
+// Update the number of questions answered on the page
+function updateQuestionsAnswered() {
+    document.getElementById("questionsAnswered").innerText = questionsAnswered;
+}
+//Call the function after updating the number
+questionsAnswered++;
+updateQuestionsAnswered();
+
 //To reset the score when done
 function resetScore() {
     score = 0; updateScore();
