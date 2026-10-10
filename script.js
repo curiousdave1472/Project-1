@@ -303,11 +303,14 @@ function getNextQuestion() {
   
   // Change the text on the answer button back to "Show Answer".
     answerButton.innerText = "Show Answer";
+  
   // Check if categoryID is null, meaning no specific category was selected.
-    if (categoryID === null) {// If no category is selected, get a random question.
+        if (categoryID === null) {// If no category is selected, get a random question.
         getQuestionRandom();
-    } else { // If a category is selected, increase questionIndex so we move to the next question.
+    } 
+        else { // If a category is selected, increase questionIndex so we move to the next question.
         questionIndex++;
+      
         // Check if questionIndex has reached the end of questionBank.
         if (questionIndex >= questionBank.length) {// so we start again from the first question.
             questionIndex = 0;
@@ -325,30 +328,31 @@ let questionAnswered = 0;
 // Update the number of questions answered on the page
 function updateQuestionsAnswered() {
     document.getElementById("questionsAnswered").innerText = questionsAnswered;
- 
 }
+
 //Call the function after updating the number
 updateQuestionAnswered()
 
 //This function is to make submit answer to work with the score
 let submitAnswerbtn = document.querySelector(".submitAnswer");
 
-submitAnswerbtn.addEventListener("click",()=> {
+//This will get the value every time the submit answer is clicked
+    submitAnswerbtn.addEventListener("click", () => {
     let userAnswer = document.getElementById("userAnswer").value;
     let correctAnswer = questionBank[questionIndex].correct_answer;
 
+//This will check if the answer is correct
   checkAnswer(userAnswer,correctAnswer)
 
-  //Update the question answered
+//Update the question answered
   questionsAnswered++;
-  //Call the function after updating
+//Call the function after updating
   updateQuestionsAnswered();
   });
 
 //Create the function for score as updateScore
 function updateScore() {
   document.getElementById("score").innerText = score;
-  console.log("score= ",score)
 }
 
 //Now check the answer and add one point for each correct answer
@@ -358,12 +362,10 @@ function checkAnswer(userAnswer, correctAnswer) {
         score++;   
         updateScore(); 
         alert("Correct!");
-    } else {
+      } else {
         alert("Wrong answer!");
-    }
+        }
 }
-
-
 
 //To reset the score when done
 function resetScore() {
