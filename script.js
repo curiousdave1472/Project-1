@@ -337,7 +337,7 @@ updateQuestionAnswered()
 let submitAnswerbtn = document.querySelector(".submitAnswer");
 
 //This will get the value every time the submit answer is clicked
-    submitAnswerbtn.addEventListener("click", () => {
+    submitAnswerbtn.addEventListener("click",()=> {
     let userAnswer = document.getElementById("userAnswer").value;
     let correctAnswer = questionBank[questionIndex].correct_answer;
 
